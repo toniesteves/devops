@@ -16,6 +16,7 @@
 .byebug_history
 
 # Application environment files
+.env
 .ruby-version
 .ruby-gemset
 .rspec
