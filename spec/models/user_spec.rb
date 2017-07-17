@@ -1,13 +1,16 @@
 require 'rails_helper'
 
 describe User, type: [:model, :user]  do
-  before { @user = build(:user) }
+  subject { build(:user) }
 
-  it { expect(@user).to respond_to(:email) }
-  it { expect(@user).to respond_to(:name) }
-  it { expect(@user).to respond_to(:password) }
-  it { expect(@user).to respond_to(:password_confirmation) }
-  it { expect(@user).to be_valid }
+  context "when user is created" do
+
+    it { expect(subject).to validate_presence_of(:email) }
+    it { expect(subject).to validate_uniqueness_of(:email).case_insensitive }
+    it { expect(subject).to validate_confirmation_of(:password) }
+    it { expect(subject).to allow_value("toni.esteves@gmail.com").for(:email) }
+
+  end
 
 
 end
