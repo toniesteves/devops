@@ -24,7 +24,7 @@ gem 'puma', '~> 3.7'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
-# Flexible authentication solution for Rails with Warden. 
+# Flexible authentication solution for Rails with Warden.
 gem 'devise'
 
 group :development, :test do
@@ -40,6 +40,8 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
   # A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker'
+  # This gem implements the rspec command for Spring.
+  gem 'spring-commands-rspec'
 end
 
 group :development do
