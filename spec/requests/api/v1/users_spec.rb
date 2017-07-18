@@ -9,7 +9,7 @@ describe 'Users API', type: [:request, :user]  do
   describe "GET /users/:id " do
 
     before do
-      headers = {"Accept" => "application/vnd.taskmanager.v1"}
+      headers = {'Accept' => 'application/vnd.taskmanager.v1'}
       get "/users/#{user_id}", params:{}, headers: headers
     end
 
@@ -17,7 +17,7 @@ describe 'Users API', type: [:request, :user]  do
     context "when the user exists" do
       it "returns the user" do
         response_body = JSON.parse(response.body)
-        expect(response_body["id"]).to eq(user_id)
+        expect(response_body['id']).to eq(user_id)
       end
 
       it "return 200 status code" do
