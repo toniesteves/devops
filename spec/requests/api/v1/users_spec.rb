@@ -107,4 +107,20 @@ describe 'Users API', type: [:request, :user]  do
     end
   end
 
+  describe "DELETE /users/:id" do
+
+    before do
+      headers = {'Accept' => 'application/vnd.taskmanager.v1'}
+      delete "/users/#{user_id}", params:{}, headers: headers
+    end
+
+    it "return status code 204" do
+      expect(response).to have_http_status(:no_content)
+    end
+
+    it "removes user from database" do
+      expect(User.find_by(id: user_id)).to be_nil
+    end
+
+  end
 end
