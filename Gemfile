@@ -42,6 +42,8 @@ group :development, :test do
   gem 'faker'
   # This gem implements the rspec command for Spring.
   gem 'spring-commands-rspec'
+  # Code coverage for Ruby 1.9+ with a powerful configuration library and automatic merging of coverage across test suites
+  gem 'simplecov'
 end
 
 group :development do
