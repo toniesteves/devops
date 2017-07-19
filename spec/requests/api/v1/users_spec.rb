@@ -16,8 +16,8 @@ describe 'Users API', type: [:request, :user]  do
 
     context "when the user exists" do
       it "returns the user" do
-        response_body = JSON.parse(response.body)
-        expect(response_body['id']).to eq(user_id)
+        response_body = JSON.parse(response.body, symbolize_names: true)
+        expect(response_body[:id]).to eq(user_id)
       end
 
       it "return 200 status code" do
@@ -52,8 +52,8 @@ describe 'Users API', type: [:request, :user]  do
       end
 
       it "return json data with created user" do
-        response_body = JSON.parse(response.body)
-        expect(response_body['email']).to eq(user_params[:email])
+        response_body = JSON.parse(response.body, symbolize_names: true)
+        expect(response_body[:email]).to eq(user_params[:email])
       end
     end
 
@@ -65,8 +65,8 @@ describe 'Users API', type: [:request, :user]  do
       end
 
       it "return json data with errors" do
-        response_body = JSON.parse(response.body)
-        expect(response_body).to have_key('errors')
+        response_body = JSON.parse(response.body, symbolize_names: true)
+        expect(response_body).to have_key(:errors)
       end
 
     end
