@@ -1,24 +1,42 @@
-# README
+### Motivação
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplicação desenvolvida afim de aumentar os conehcimento em TDD
 
-Things you may want to cover:
 
-* Ruby version
+### Descrição
 
-* System dependencies
+O sistema em questão compõe uma API Ror ainda em desenvolvimento onde:
 
-* Configuration
+1 - É possível cadastrar usuarios e efetuar login com devise
 
-* Database creation
+### Detalhes técnicos/Decisões técnicas tomadas
 
-* Database initialization
+O projeto, que ainda encontra-se em desenvolvimento, utiliza das seguintes tecnologias: RubyOnRails (tradução/locale de models, controllers e/ou views somente em pt-BR), utilização RSpec, Factorygirl, Faker gem, Devise e PostgreSQL.
+Tais gems foram adotadas para melhor desenvolvimento utilizando o TDD como premissa básica para seu desenvolvimento. A arquitetura ficou por parte do padro MVC do rails, não sendo necessárias modificações arquiteturais.
 
-* How to run the test suite
+### Como compilar/rodar o projeto e os testes
 
-* Services (job queues, cache servers, search engines, etc.)
+- Baixe a copia código do repositório:
 
-* Deployment instructions
+  - `> git@github.com:toniesteves/task-manager-api.git`
 
-* ...
+  - Va para a raiz do dir do projeto e instale as dependências com os comandos:
+
+  - `> cd task-manager-api`
+
+  - `> bundle install`
+
+  - `> rake db:create`
+
+  - `> rake db:migrate`
+
+  - Para iniciar o server local, digitar os seguintes comandos na raiz do projeto:
+
+  - `> rails server`
+  
+  - Para execução dos testes execute:
+   
+  - `> bundle exec spring rspec spec`
+
+   
+
