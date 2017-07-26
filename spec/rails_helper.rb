@@ -42,7 +42,7 @@ RSpec.configure do |config|
   # FactoryGirl configuration
   config.include FactoryGirl::Syntax::Methods
 
-  # FactoryGirl configuration
+  # Json body symbolize keys helper
   config.include RequestSpecHelper, type: :request
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
