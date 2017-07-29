@@ -16,7 +16,11 @@ describe User, type: [:model, :user]  do
       it 'returns email, created_at and a token' do
         subject.save!
 
-        #Mock
+        # Stub
+        # A method stub is an instruction to an object (real or test double) to return a
+        # known value in response to a message:
+        # allow(die).to receive(:roll) { 3 }
+        # This tells the die object to return the value 3 when it receives the roll message.
         allow(Devise).to receive(:friendly_token).and_return('abc123xyztoken')
 
         expect(subject.info).to eq("#{subject.email} - #{subject.created_at} - Token: abc123xyztoken")
