@@ -40,7 +40,6 @@ class Api::V1::UsersController < ApplicationController
     head :no_content
   end
 
-
   private
 
   def user_params
