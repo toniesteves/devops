@@ -14,14 +14,14 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-29T23:50:19-03:00">2017-07-29T23:50:19-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-29T23:58:56-03:00">2017-07-29T23:58:56-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">1.99%</span></span>
+    (<span class="covered_percent"><span class="red">1.97%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -32,9 +32,9 @@
   <a name="AllFiles"></a>
   <div>
     <b>12</b> files in total.
-    <b>151</b> relevant lines. 
+    <b>152</b> relevant lines. 
     <span class="green"><b>3</b> lines covered</span> and
-    <span class="red"><b>148</b> lines missed </span>
+    <span class="red"><b>149</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -153,10 +153,10 @@
       <tr>
         <td class="strong"><a href="#450a200b4b5b8e2294fa49bf7596dd46f9ead02d" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
         <td class="red strong">0.0 %</td>
-        <td>19</td>
-        <td>19</td>
+        <td>20</td>
+        <td>20</td>
         <td>0</td>
-        <td>19</td>
+        <td>20</td>
         <td>0.0</td>
       </tr>
       
@@ -313,7 +313,7 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="red">12.0%</span></span>
+    (<span class="covered_percent"><span class="red">11.54%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -324,9 +324,9 @@
   <a name="Models"></a>
   <div>
     <b>3</b> files in total.
-    <b>25</b> relevant lines. 
+    <b>26</b> relevant lines. 
     <span class="green"><b>3</b> lines covered</span> and
-    <span class="red"><b>22</b> lines missed </span>
+    <span class="red"><b>23</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -365,10 +365,10 @@
       <tr>
         <td class="strong"><a href="#450a200b4b5b8e2294fa49bf7596dd46f9ead02d" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
         <td class="red strong">0.0 %</td>
-        <td>19</td>
-        <td>19</td>
+        <td>20</td>
+        <td>20</td>
         <td>0</td>
-        <td>19</td>
+        <td>20</td>
         <td>0.0</td>
       </tr>
       
@@ -1486,9 +1486,9 @@
     <h3>app/models/user.rb</h3>
     <h4><span class="red">0.0 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
+      <b>20</b> relevant lines. 
       <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>19</b> lines missed.</span>
+      <span class="red"><b>20</b> lines missed.</span>
     </div>
   </div>
   
@@ -1546,64 +1546,70 @@
         <li class="missed" data-hits="0" data-linenumber="9">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  has_many :tasks, dependent: :destroy</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="10">
           
           
-          <code class="ruby">  def info</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">    &quot;#{email} - #{created_at} - Token: #{Devise.friendly_token}&quot;</code>
+          <code class="ruby">  def info</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    &quot;#{email} - #{created_at} - Token: #{Devise.friendly_token}&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">  def generate_authentication_token!</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="15">
           
           
-          <code class="ruby">    begin</code>
+          <code class="ruby">  def generate_authentication_token!</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">      self.auth_token = Devise.friendly_token</code>
+          <code class="ruby">    begin</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="17">
           
           
-          <code class="ruby">    end while User.exists?(auth_token: auth_token)</code>
+          <code class="ruby">      self.auth_token = Devise.friendly_token</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="18">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end while User.exists?(auth_token: auth_token)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="20">
           
           
           <code class="ruby">end</code>

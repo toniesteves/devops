@@ -161,6 +161,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/Users/Toni/Git/task-manager-api/lib/api_version_constraint.rb": [
@@ -179,6 +180,6 @@
         0
       ]
     },
-    "timestamp": 1501383019
+    "timestamp": 1501383536
   }
 }
