@@ -10,17 +10,24 @@
         1,
         null,
         1,
-        13,
+        51,
         null,
         null,
         1,
-        8,
+        27,
         null,
         null,
         1,
-        10,
+        29,
         null,
         null,
+        null
+      ],
+      "/Users/Toni/Git/task-manager-api/app/models/task.rb": [
+        1,
+        1,
+        null,
+        1,
         null
       ],
       "/Users/Toni/Git/task-manager-api/app/controllers/api/v1/users_controller.rb": [
@@ -70,6 +77,52 @@
         null,
         1,
         8,
+        null,
+        null,
+        null
+      ],
+      "/Users/Toni/Git/task-manager-api/app/controllers/api/v1/tasks_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        7,
+        7,
+        4,
+        null,
+        3,
+        null,
+        null,
+        null,
+        1,
+        6,
+        6,
+        3,
+        null,
+        3,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        null,
+        1,
+        13,
         null,
         null,
         null
@@ -154,6 +207,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/Users/Toni/Git/task-manager-api/lib/api_version_constraint.rb": [
@@ -172,6 +226,6 @@
         0
       ]
     },
-    "timestamp": 1501380656
+    "timestamp": 1501457347
   }
 }
