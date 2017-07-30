@@ -30,6 +30,20 @@ describe 'Tasks API', type: [:request, :task]  do
 
   end
 
+  describe "GET /tasks/:id" do
+    let!(:task) { create(:task, user_id: user.id) }
+    before do
+      get "/tasks/#{task.id}", params: { }, headers: headers
+    end
 
+    it 'return status code 200' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'return json with task' do
+      expect(json_body[:title]).to eq(task.title)
+    end
+
+  end
 
 end

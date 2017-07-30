@@ -17,6 +17,11 @@
         2,
         null,
         null,
+        1,
+        2,
+        2,
+        null,
+        null,
         null
       ],
       "/Users/Toni/Git/task-manager-api/app/controllers/application_controller.rb": [
@@ -28,15 +33,15 @@
         1,
         null,
         1,
+        8,
+        null,
+        null,
+        1,
         4,
         null,
         null,
         1,
-        2,
-        null,
-        null,
-        1,
-        2,
+        4,
         null,
         null,
         null
@@ -191,6 +196,6 @@
         0
       ]
     },
-    "timestamp": 1501448917
+    "timestamp": 1501451196
   }
 }

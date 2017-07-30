@@ -6,4 +6,9 @@ class Api::V1::TasksController < ApplicationController
     render json: { tasks: tasks }, status: :ok
   end
 
+  def show
+    task = current_user.tasks.find(params[:id])
+    render json: task, status: :ok
+  end
+
 end
