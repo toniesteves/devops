@@ -39,10 +39,10 @@ describe Authenticable, type: :controller do
   describe '#authenticate_with_token' do
 
     # Controller anonimo Rspec
-    # controller do
-    #   before_action :authenticate_with_token
-    #   def restricted_action; end
-    # end
+    controller do
+      before_action :authenticate_with_token!
+      def restricted_action; end
+    end
 
 
     context 'when there is no user logged in'  do
@@ -61,12 +61,6 @@ describe Authenticable, type: :controller do
       end
 
     end
-
-
-    context "when " do
-
-    end
-
 
   end
 
