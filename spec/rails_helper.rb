@@ -42,8 +42,8 @@ RSpec.configure do |config|
   # FactoryGirl configuration
   config.include FactoryGirl::Syntax::Methods
 
-  # FactoryGirl configuration
-  config.include RequestSpecHelper, type: :request
+  # Json body symbolize keys helper
+  config.include RequestSpecHelper
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
