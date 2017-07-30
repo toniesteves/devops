@@ -93,4 +93,47 @@ describe 'Tasks API', type: [:request, :task]  do
 
     end
   end
+
+  describe 'PUT /task/:id' do
+    let!(:task) { create(:task, user_id: user.id) }
+
+    before do
+      put "/tasks/#{task.id}", params: { task: task_params }.to_json, headers: headers
+    end
+
+    context "when are valid params" do
+      let(:task_params) { attributes_for(:task, title: 'New task title') }
+
+      it 'return status code 200' do
+        expect(response).to have_http_status(:ok)
+      end
+
+      it 'return json for updated task' do
+        expect(json_body[:title]).to eq(task_params[:title])
+      end
+
+      it 'update task in database' do
+        expect( Task.find_by(title: task_params[:title]) ).not_to be_nil
+      end
+
+
+    end
+
+    context "when are invalid params" do
+      let(:task_params) { attributes_for(:task, title: ' ') }
+
+      it 'return status code 422' do
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+
+      it 'return json error for title' do
+        expect(json_body[:errors]).to have_key(:title)
+      end
+
+      it 'task does not updated in database' do
+        expect( Task.find_by(title: task_params[:title]) ).to be_nil
+      end
+
+    end
+  end
 end
