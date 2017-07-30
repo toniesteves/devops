@@ -13,6 +13,11 @@
         1,
         null,
         null,
+        1,
+        2,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/Toni/Git/task-manager-api/app/controllers/api/v1/users_controller.rb": [
@@ -164,6 +169,6 @@
         0
       ]
     },
-    "timestamp": 1501301327
+    "timestamp": 1501376019
   }
 }

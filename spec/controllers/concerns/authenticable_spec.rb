@@ -36,4 +36,38 @@ describe Authenticable, type: :controller do
 
   end
 
+  describe '#authenticate_with_token' do
+
+    # Controller anonimo Rspec
+    # controller do
+    #   before_action :authenticate_with_token
+    #   def restricted_action; end
+    # end
+
+
+    context 'when there is no user logged in'  do
+      before do
+        allow(app_controller).to receive(:current_user).and_return(nil)
+        routes.draw { get 'restricted_action' => 'anonymous#restricted_action' }
+        get :restricted_action
+      end
+
+      it 'return status 401' do
+        expect(response).to have_http_status(:unauthorized)
+      end
+
+      it 'return json data for errors' do
+        expect(json_body).to have_key(:errors)
+      end
+
+    end
+
+
+    context "when " do
+
+    end
+
+
+  end
+
 end
