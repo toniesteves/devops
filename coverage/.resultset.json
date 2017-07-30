@@ -8,6 +8,39 @@
         1,
         null
       ],
+      "/Users/Toni/Git/task-manager-api/app/controllers/api/v1/tasks_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/Toni/Git/task-manager-api/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/Toni/Git/task-manager-api/app/controllers/concerns/authenticable.rb": [
+        1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
       "/Users/Toni/Git/task-manager-api/app/channels/application_cable/channel.rb": [
         0,
         0,
@@ -105,28 +138,6 @@
         0,
         0
       ],
-      "/Users/Toni/Git/task-manager-api/app/controllers/application_controller.rb": [
-        0,
-        0,
-        0
-      ],
-      "/Users/Toni/Git/task-manager-api/app/controllers/concerns/authenticable.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "/Users/Toni/Git/task-manager-api/app/jobs/application_job.rb": [
         0,
         0
@@ -180,6 +191,6 @@
         0
       ]
     },
-    "timestamp": 1501383536
+    "timestamp": 1501448917
   }
 }
