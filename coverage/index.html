@@ -14,27 +14,27 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-08-06T18:40:50-03:00">2017-08-06T18:40:50-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-08-06T19:38:48-03:00">2017-08-06T19:38:48-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">74.75%</span></span>
+    (<span class="covered_percent"><span class="red">74.51%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.82
+         3.06
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>16</b> files in total.
-    <b>198</b> relevant lines. 
-    <span class="green"><b>148</b> lines covered</span> and
-    <span class="red"><b>50</b> lines missed </span>
+    <b>17</b> files in total.
+    <b>204</b> relevant lines. 
+    <span class="green"><b>152</b> lines covered</span> and
+    <span class="red"><b>52</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -147,7 +147,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>30.1</td>
+        <td>39.0</td>
       </tr>
       
       <tr>
@@ -201,6 +201,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#f8a819e0bd058e465bb8ec3be5e1353ea2ec04a4" class="src_link" title="app/serializers/api/v2/task_serializer.rb">app/serializers/api/v2/task_serializer.rb</a></td>
+        <td class="red strong">66.67 %</td>
+        <td>12</td>
+        <td>6</td>
+        <td>4</td>
+        <td>2</td>
+        <td>0.7</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#767c1bd968f57b2f90225f09a4d2a688cd1cd979" class="src_link" title="lib/api_version_constraint.rb">lib/api_version_constraint.rb</a></td>
         <td class="red strong">0.0 %</td>
         <td>13</td>
@@ -223,7 +233,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.83
+         4.26
        </span>
     </span> hits/line)
   </h2>
@@ -325,7 +335,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>30.1</td>
+        <td>39.0</td>
       </tr>
       
     </tbody>
@@ -628,6 +638,53 @@
         <td>0</td>
         <td>13</td>
         <td>0.0</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+        
+          <div class="file_list_container" id="Ungrouped">
+  <h2>
+    <span class="group_name">Ungrouped</span>
+    (<span class="covered_percent"><span class="red">66.67%</span></span>
+     covered at
+     <span class="covered_strength">
+       <span class="red">
+         0.7
+       </span>
+    </span> hits/line)
+  </h2>
+  <a name="Ungrouped"></a>
+  <div>
+    <b>1</b> files in total.
+    <b>6</b> relevant lines. 
+    <span class="green"><b>4</b> lines covered</span> and
+    <span class="red"><b>2</b> lines missed </span>
+  </div>
+  <table class="file_list">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>% covered</th>
+        <th>Lines</th>
+        <th>Relevant Lines</th>
+        <th>Lines covered</th>
+        <th>Lines missed</th>
+        <th>Avg. Hits / Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#f8a819e0bd058e465bb8ec3be5e1353ea2ec04a4" class="src_link" title="app/serializers/api/v2/task_serializer.rb">app/serializers/api/v2/task_serializer.rb</a></td>
+        <td class="red strong">66.67 %</td>
+        <td>12</td>
+        <td>6</td>
+        <td>4</td>
+        <td>2</td>
+        <td>0.7</td>
       </tr>
       
     </tbody>
@@ -2414,8 +2471,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="101" data-linenumber="4">
-          <span class="hits">101</span>
+        <li class="covered" data-hits="163" data-linenumber="4">
+          <span class="hits">163</span>
           
           <code class="ruby">    @current_user ||= User.find_by(auth_token: request.headers[&#39;Authorization&#39;])</code>
         </li>
@@ -2780,6 +2837,97 @@
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="20">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="f8a819e0bd058e465bb8ec3be5e1353ea2ec04a4">
+  <div class="header">
+    <h3>app/serializers/api/v2/task_serializer.rb</h3>
+    <h4><span class="red">66.67 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Api::V2::TaskSerializer &lt; ActiveModel::Serializer</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attributes :id, :title, :description, :done,:deadline, :user_id, :created_at, :updated_at</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def short_description</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">    object.description[0..40]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def is_late</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">    Time.current &gt; object.deadline if object.deadline.present?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">end</code>
