@@ -1,12 +1,11 @@
 class Api::V2::UsersController < ApplicationController
   before_action :authenticate_with_token!, only: [:update, :destroy]
-  respond_to :json
   wrap_parameters :user, include: [:email, :password, :password_confirmation]
 
   def show
     begin
-      @user = User.find(params[:id])
-      respond_with @user
+      user = User.find(params[:id])
+      render json: user, status: :ok
     rescue
       head :not_found
     end
