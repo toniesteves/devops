@@ -25,7 +25,7 @@ describe 'Sessions API', type: [:request, :session] do
 
       it 'return json data with user auth token' do
         user.reload
-        expect(json_body[:auth_token]).to eq(user.auth_token)
+        expect(json_body[:data][:attributes][:'auth-token']).to eq(user.auth_token)
       end
 
     end
