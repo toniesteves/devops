@@ -41,7 +41,7 @@ describe 'Tasks API', type: [:request, :task]  do
     end
 
     it 'return json with task' do
-      expect(json_body[:title]).to eq(task.title)
+      expect(json_body[:data][:attributes][:title]).to eq(task.title)
     end
 
   end
@@ -60,7 +60,7 @@ describe 'Tasks API', type: [:request, :task]  do
       end
 
       it 'return json to created task' do
-        expect(json_body[:title]).to eq(task_params[:title])
+        expect(json_body[:data][:attributes][:title]).to eq(task_params[:title])
       end
 
       it 'save task in database' do
@@ -71,7 +71,7 @@ describe 'Tasks API', type: [:request, :task]  do
       end
 
       it 'assings created task to current user' do
-        expect(json_body[:user_id]).to eq(user.id)
+        expect(json_body[:data][:attributes][:'user-id']).to eq(user.id)
       end
 
     end
@@ -109,7 +109,7 @@ describe 'Tasks API', type: [:request, :task]  do
       end
 
       it 'return json for updated task' do
-        expect(json_body[:title]).to eq(task_params[:title])
+        expect(json_body[:data][:attributes][:title]).to eq(task_params[:title])
       end
 
       it 'update task in database' do
