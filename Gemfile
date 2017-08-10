@@ -28,6 +28,8 @@ gem 'puma', '~> 3.7'
 gem 'devise'
 # ActiveModel::Serializer implementation and Rails hooks
 gem 'active_model_serializers', '~> 0.10.0'
+# Object-based searching. 
+gem 'ransack'
 
 
 group :development, :test do
