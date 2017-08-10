@@ -32,7 +32,7 @@ describe 'Tasks API', type: [:request, :task]  do
       end
     end
 
-    context 'when filter params are sent' do
+    context 'when filter and sort params are sent' do
 
       let!(:notebook_task_1) { create(:task, title:'Check if notebook is broken', user_id: user.id) }
       let!(:notebook_task_2) { create(:task, title:'Buy a new notebook', user_id: user.id) }
@@ -40,13 +40,13 @@ describe 'Tasks API', type: [:request, :task]  do
       let!(:other_task_2) { create(:task, title:'Buy a new car', user_id: user.id) }
 
       before do
-        get '/tasks?q[title_cont]=note', params: {}, headers: headers
+        get '/tasks?q[title_cont]=note&q[s]=title+ASC', params: {}, headers: headers
       end
 
       it 'returns only tasks that matching' do
         returned_task_titles = json_body[:data].map { |task| task[:attributes][:title] }
 
-        expect(returned_task_titles).to eq([notebook_task_1.title, notebook_task_2.title])
+        expect(returned_task_titles).to eq([notebook_task_2.title, notebook_task_1.title])
       end
 
     end
