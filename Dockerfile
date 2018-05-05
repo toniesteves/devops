@@ -12,7 +12,3 @@ COPY Gemfile.lock /task-manager-api/Gemfile.lock
 RUN bundle install
 
 COPY . /task-manager-api
-
-EXPOSE 3000
-
-CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
