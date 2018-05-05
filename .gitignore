@@ -20,5 +20,7 @@
 .ruby-version
 .ruby-gemset
 .rspec
+.DS_Store
 /Procfile
 /coverage/*
+/postgres/*
