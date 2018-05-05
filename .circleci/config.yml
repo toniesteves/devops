@@ -77,7 +77,6 @@ jobs:
           bundle exec rspec --profile 10 \
                             --format documentation \
                             --order rand
-                            --color
                             $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
 
 
