@@ -83,8 +83,3 @@ jobs:
       # Save test results for timing analysis
       - store_test_results:
           path: coverage
-    deployment:
-      prod:
-        branch: master
-        heroku:
-          appname: task-manager-api
