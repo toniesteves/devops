@@ -1,9 +1,4 @@
 version: 2
-deployment:
-  prod:
-    branch: master
-    heroku:
-      appname: task-manager-api
 jobs:
   build:
     parallelism: 3
@@ -88,3 +83,9 @@ jobs:
       # Save test results for timing analysis
       - store_test_results:
           path: coverage
+
+      deployment:
+        prod:
+          branch: master
+          heroku:
+            appname: task-manager-api
