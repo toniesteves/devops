@@ -22,7 +22,7 @@ require 'rspec/rails'
 #
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
-# Checks for pending migration and applies them before tests are run.
+# Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
@@ -40,10 +40,13 @@ RSpec.configure do |config|
   end
 
   # FactoryGirl configuration
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   # Json body symbolize keys helper
   config.include RequestSpecHelper
+
+  # include Devise::Test::ControllerHelpers module in all :controller specs.
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -73,7 +76,6 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
-
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
