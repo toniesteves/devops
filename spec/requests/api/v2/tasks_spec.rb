@@ -2,25 +2,24 @@ require 'rails_helper'
 
 describe 'Tasks API', type: [:request, :task]  do
 
-  before { host! 'api.task-manager.dev' }
+  before { host! 'localhost' }
 
   let!(:user) { create(:user) }
   let(:headers) do
     {
-      'Accept' => 'application/vnd.taskmanager.v2',
       'Content-Type' => Mime[:json].to_s,
       'Authorization' => user.auth_token
 
     }
   end
 
-  describe 'GET /tasks' do
+  describe 'GET /api/v2/tasks' do
 
     context 'when filter params are not sent' do
 
       before do
         create_list(:task, 5, user_id: user.id)
-        get '/tasks', params: {}, headers: headers
+        get '/api/v2/tasks', params: {}, headers: headers
       end
 
       it 'return status code 200' do
@@ -40,7 +39,7 @@ describe 'Tasks API', type: [:request, :task]  do
       let!(:other_task_2) { create(:task, title:'Buy a new car', user_id: user.id) }
 
       before do
-        get '/tasks?q[title_cont]=note&q[s]=title+ASC', params: {}, headers: headers
+        get '/api/v2/tasks?q[title_cont]=note&q[s]=title+ASC', params: {}, headers: headers
       end
 
       it 'returns only tasks that matching' do
@@ -53,10 +52,10 @@ describe 'Tasks API', type: [:request, :task]  do
 
   end
 
-  describe 'GET /tasks/:id' do
+  describe 'GET /api/v2/tasks/:id' do
     let!(:task) { create(:task, user_id: user.id) }
     before do
-      get "/tasks/#{task.id}", params: { }, headers: headers
+      get "/api/v2/tasks/#{task.id}", params: { }, headers: headers
     end
 
     it 'return status code 200' do
@@ -69,10 +68,10 @@ describe 'Tasks API', type: [:request, :task]  do
 
   end
 
-  describe 'POST /tasks' do
+  describe 'POST /api/v2/tasks' do
 
     before do
-      post '/tasks', params: { task: task_params }.to_json, headers: headers
+      post '/api/v2/tasks', params: { task: task_params }.to_json, headers: headers
     end
 
     context 'when parameters are valid' do
@@ -117,11 +116,11 @@ describe 'Tasks API', type: [:request, :task]  do
     end
   end
 
-  describe 'PUT /task/:id' do
+  describe 'PUT /api/v2/task/:id' do
     let!(:task) { create(:task, user_id: user.id) }
 
     before do
-      put "/tasks/#{task.id}", params: { task: task_params }.to_json, headers: headers
+      put "/api/v2/tasks/#{task.id}", params: { task: task_params }.to_json, headers: headers
     end
 
     context "when are valid params" do
@@ -160,11 +159,11 @@ describe 'Tasks API', type: [:request, :task]  do
     end
   end
 
-  describe 'DELETE /task/:id' do
+  describe 'DELETE /api/v2/task/:id' do
     let!(:task) { create(:task, user_id: user.id) }
 
     before do
-      delete "/tasks/#{task.id}", params: { }, headers: headers
+      delete "/api/v2/tasks/#{task.id}", params: { }, headers: headers
     end
 
     it 'return http status 204' do
