@@ -2,18 +2,17 @@ require 'rails_helper'
 
 describe 'Sessions API', type: [:request, :session] do
 
-  before { host! 'api.task-manager.dev' }
+  before { host! 'localhost' }
   let!(:user) { create(:user) }
   let(:headers) do
     {
-      'Accept' => 'application/vnd.taskmanager.v1',
       'Content-Type' => Mime[:json].to_s
     }
   end
 
-  describe 'POST /sessions' do
+  describe 'POST /api/v1/sessions' do
     before do
-      post '/sessions', params: { session: credentials }.to_json, headers: headers
+      post '/api/v1/sessions', params: { session: credentials }.to_json, headers: headers
     end
 
     context 'when valid credentials' do
@@ -48,11 +47,11 @@ describe 'Sessions API', type: [:request, :session] do
   end
 
 
-  describe 'DELETE /sessions/:id' do
+  describe 'DELETE /api/v1/sessions/:id' do
     let(:auth_token) { user.auth_token }
 
     before do
-      delete "/sessions/#{auth_token}", params: {}, headers: headers
+      delete "/api/v1/sessions/#{auth_token}", params: {}, headers: headers
     end
 
     it 'return status code 204' do

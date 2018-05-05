@@ -13,15 +13,21 @@
 !/log/.keep
 !/tmp/.keep
 
-.byebug_history
+/node_modules
+/yarn-error.log
+/coverage
+/public/donations
+/public/uploads
+/vendor/bundle
 
-# Application environment files
-.env
+.byebug_history
 .ruby-version
 .ruby-gemset
 .rspec
 .DS_Store
-/Procfile
-/coverage/*
-/postgres/*
-/config/database-local.yml
+.env
+Procfile
+.tool-versions
+
+Dockerfile
+docker-compose.yml
