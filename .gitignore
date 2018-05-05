@@ -24,3 +24,4 @@
 /Procfile
 /coverage/*
 /postgres/*
+/config/database-local.yml
