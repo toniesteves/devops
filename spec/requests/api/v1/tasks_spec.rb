@@ -2,22 +2,21 @@ require 'rails_helper'
 
 describe 'Tasks API', type: [:request, :task]  do
 
-  before { host! 'api.task-manager.dev' }
+  before { host! 'localhost' }
 
   let!(:user) { create(:user) }
   let(:headers) do
     {
-      'Accept' => 'application/vnd.taskmanager.v1',
       'Content-Type' => Mime[:json].to_s,
       'Authorization' => user.auth_token
 
     }
   end
 
-  describe 'GET /tasks' do
+  describe 'GET /api/v1/tasks' do
     before do
       create_list(:task, 5, user_id: user.id)
-      get '/tasks', params: {}, headers: headers
+      get '/api/v1/tasks', params: {}, headers: headers
     end
 
     it 'return status code 200' do
@@ -30,10 +29,10 @@ describe 'Tasks API', type: [:request, :task]  do
 
   end
 
-  describe 'GET /tasks/:id' do
+  describe 'GET /api/v1/tasks/:id' do
     let!(:task) { create(:task, user_id: user.id) }
     before do
-      get "/tasks/#{task.id}", params: { }, headers: headers
+      get "/api/v1/tasks/#{task.id}", params: { }, headers: headers
     end
 
     it 'return status code 200' do
@@ -46,10 +45,10 @@ describe 'Tasks API', type: [:request, :task]  do
 
   end
 
-  describe 'POST /tasks' do
+  describe 'POST /api/v1/tasks' do
 
     before do
-      post '/tasks', params: { task: task_params }.to_json, headers: headers
+      post '/api/v1/tasks', params: { task: task_params }.to_json, headers: headers
     end
 
     context 'when parameters are valid' do
@@ -94,11 +93,11 @@ describe 'Tasks API', type: [:request, :task]  do
     end
   end
 
-  describe 'PUT /task/:id' do
+  describe 'PUT /api/v1/task/:id' do
     let!(:task) { create(:task, user_id: user.id) }
 
     before do
-      put "/tasks/#{task.id}", params: { task: task_params }.to_json, headers: headers
+      put "/api/v1/tasks/#{task.id}", params: { task: task_params }.to_json, headers: headers
     end
 
     context "when are valid params" do
@@ -137,11 +136,11 @@ describe 'Tasks API', type: [:request, :task]  do
     end
   end
 
-  describe 'DELETE /task/:id' do
+  describe 'DELETE /api/v1/task/:id' do
     let!(:task) { create(:task, user_id: user.id) }
 
     before do
-      delete "/tasks/#{task.id}", params: { }, headers: headers
+      delete "/api/v1/tasks/#{task.id}", params: { }, headers: headers
     end
 
     it 'return http status 204' do
