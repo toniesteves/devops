@@ -1,4 +1,9 @@
 version: 2
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: task-manager-api
 jobs:
   build:
     parallelism: 3
