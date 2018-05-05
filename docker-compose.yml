@@ -1,5 +1,9 @@
 version: '3'
 services:
+  web:
+    image: nginx
+    ports:
+    - 80:80
   db:
     image: postgres
     restart: always
@@ -7,12 +11,13 @@ services:
       POSTGRES_PASSWORD: postgres
     volumes:
       - ./postgres:/var/lib/postgresql/data
-  web:
+  app:
     build: .
-    command: bundle exec rails s -p 5000 -b '0.0.0.0'
     volumes:
       - .:/task-manager-api
+    environment:
+      - RAILS_ENV=${RAILS_ENV}
     ports:
-      - "5000:5000"
+      - "5000:3000"
     depends_on:
       - db
